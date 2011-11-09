@@ -5,11 +5,11 @@
 	<artifactId>lolay-logjam</artifactId>
 	<packaging>jar</packaging>
 	<name>Lolay Mobile Logging Library</name>
-	<version>1</version>
+	<version>1-SNAPSHOT</version>
 	<scm>
-		<connection>scm:git:git://github.com/lolay/strands-android.git</connection>
-		<developerConnection>scm:git:git@github.com:lolay/strands-android.git</developerConnection>
-		<url>http://github.com/lolay/strands-android</url>
+		<connection>scm:git:git://github.com/lolay/logjam-android.git</connection>
+		<developerConnection>scm:git:git@github.com:lolay/logjam-android.git</developerConnection>
+		<url>http://github.com/lolay/logjam-android</url>
 	</scm>
 	<distributionManagement>
 		<repository>
