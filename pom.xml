@@ -5,7 +5,7 @@
 	<artifactId>lolay-logjam</artifactId>
 	<packaging>jar</packaging>
 	<name>Lolay Mobile Logging Library</name>
-	<version>1-SNAPSHOT</version>
+	<version>1</version>
 	<scm>
 		<connection>scm:git:git://github.com/lolay/logjam-android.git</connection>
 		<developerConnection>scm:git:git@github.com:lolay/logjam-android.git</developerConnection>
