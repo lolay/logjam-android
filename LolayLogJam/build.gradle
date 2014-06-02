@@ -1,0 +1,44 @@
+apply plugin: 'android-library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion Integer.parseInt(appCompileSdkVersion)
+    buildToolsVersion appBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(appMinSdkVersion)
+        targetSdkVersion Integer.parseInt(appTargetSdkVersion)
+        versionCode Integer.parseInt(appVersionCode)
+        versionName "$versionCode"
+    }
+
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.+'
+}
+
+task printMavenDir{
+    println mavenLolayDirectory
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId mavenLolayGroupId
+            artifactId mavenLolayArtifactId
+					
+			version android.defaultConfig.versionName + (Integer.parseInt(mavenSnapshot)==0 ? '' : '-SNAPSHOT') 			
+
+            File buildFile = new File("$buildDir/libs")
+            artifact buildFile.listFiles().first()
+        }
+    }
+
+    repositories {
+        maven {
+            url mavenLolayDirectory // See USER_HOME/.gradle/gradle.properties (has precedence) or project/gradle.properties
+        }
+    }
+}
+

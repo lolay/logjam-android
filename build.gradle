@@ -1,30 +1,16 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     repositories {
         mavenCentral()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.+'
+    }
 }
 
-apply plugin: 'java'
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
-
-repositories {
-    mavenCentral()
-	maven {
-		url "http://maven.lolay.com"
-	}
-}
-
-configurations {
-	provided
-}
-
-sourceSets {
-	main.compileClasspath += configurations.provided
-	test.compileClasspath += configurations.provided
-	test.runtimeClasspath += configurations.provided
-}
-
-dependencies {
-	provided 'com.google.android:android:2.2.1'
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
